@@ -13,7 +13,7 @@ def verificar_usuario(Usuario, contra):
 
     try:
         cursor = con.cursor()
-        query = "SELECT Tipo_usuario FROM USUARIO WHERE Usuario = %s AND Contra = %s"
+        query = "SELECT Tipo_usuario FROM USUARIO WHERE Usuario = %s AND contra = %s"
         cursor.execute(query, (Usuario, contra))
         result = cursor.fetchone()
         return result[0] if result else None
